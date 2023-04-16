@@ -1,0 +1,2 @@
+spring.data.mongodb.database=<MONGODB DATABASE NAME>
+spring.data.mongodb.uri=mongodb+srv://<MONGODB USER NAME>:<MONGODB USER PW>@<MONGODB CLUSTER>
