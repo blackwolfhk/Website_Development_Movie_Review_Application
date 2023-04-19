@@ -5,12 +5,12 @@ import { Container, Row, Col } from "react-bootstrap";
 import ReviewForm from "../reviewForm/ReviewForm";
 
 const Reviews = ({ getMovieData, movie, reviews, setReviews }) => {
-  const revText = useRef();
+  const revText = useRef(); // to reference the text input field in the "ReviewForm"
   let params = useParams();
   const movieId = params.movieId;
 
   useEffect(() => {
-    getMovieData(movieId);
+    getMovieData(movieId); // runs once when the component is mounted
   }, []);
 
   const addReview = async (e) => {
@@ -21,7 +21,7 @@ const Reviews = ({ getMovieData, movie, reviews, setReviews }) => {
     // console.log("rev :", rev);
 
     try {
-      console.log("Fetch review api handling ...");
+      console.log("POST request to the API server to add the review");
       const response = await api.post("/api/v1/reviews", {
         reviewBody: rev.value,
         imdbId: movieId,
