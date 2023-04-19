@@ -1,10 +1,10 @@
-import "./Hero.css";
+import { Link, useNavigate } from "react-router-dom";
 import Carousel from "react-material-ui-carousel";
 import { Paper } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
-import { Link, useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
+import "./Hero.css";
 
 const Hero = ({ movies }) => {
   const navigate = useNavigate();
